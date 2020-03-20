@@ -6,10 +6,8 @@ import Header from "../components/header"
 export default () => (
   <div /*style={{ color: `purple` }} */>
     <Header headerText="Hello Weather!" />
-    <ul>
-    <li><Link to="/">Home</Link></li> 
-    <li><Link to="/darkabout/">DarkSky Home</Link> </li>
-    <li><Link to="/openabout/">OpenWeather Home</Link> </li>
-      </ul>
+    <h2><Link to="/">Home</Link></h2>
+    <h2><Link to="/darkabout/">DarkSky Home</Link></h2>
+    <h2><Link to="/openabout/">OpenWeather Home</Link></h2>
     </div>
 )

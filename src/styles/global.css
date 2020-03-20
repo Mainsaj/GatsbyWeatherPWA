@@ -1,13 +1,13 @@
 html {
-  background-color: lavenderblush;
+  background-color: skyblue;
 }
 div { 
-      margin: 6px 6px 6px 6px;
+      margin: auto;
       max-width: 700px;
-      padding: 4px;
-      padding-top: 4px;
-      border: 2px solid red;
-
+     
+      background-color: white;
+      text-align: center;
+      border: 2px solid blue;
   }
 h3 {
           margin-bottom: 6px;

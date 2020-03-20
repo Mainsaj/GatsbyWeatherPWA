@@ -36,23 +36,22 @@ export default ({ children }) => (
       visibility
       ozone
     }
+  
   }
   
 }  `
 }
     render={data => (
   <div>
-    <Link to="/" style={{ float: `right`}}>
+    <Link to="/" style={{ float: `left`}}>
       Home
     </Link>
     {children}
 {/*    <Link to="/">Home </Link> */}
-    <h3><ul>
-      <li><h3>Currently Summary: {data.weatherData.currently.summary}</h3></li> 
-      <li><h3>cloudCover: {data.weatherData.currently.cloudCover}</h3></li> 
-      <li><h3>latitude: {data.weatherData.latitude}</h3></li>
-      <li><h3>longitude: {data.weatherData.longitude}</h3></li>
-    </ul></h3>  
+      <h2>Location (Lat, Long): ({data.weatherData.latitude},{data.weatherData.longitude})</h2>
+      <h2>Currently Summary: {data.weatherData.currently.summary}</h2>
+      <h2>Temperature: {data.weatherData.currently.temperature}</h2>
+      <h2>Humidity: {data.weatherData.currently.humidity}</h2>
   </div>
     )}
   />

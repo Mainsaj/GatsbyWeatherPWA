@@ -24,6 +24,12 @@ export default ({ children }) => (
         description
         icon
       }
+      main {
+        feels_like
+        temp
+        temp_max
+        temp_min
+      }
       dt
       wind {
         speed
@@ -35,16 +41,18 @@ export default ({ children }) => (
 }
     render={data => (
   <div>
-        <Link to="/" style={{ float: `right`}}>
+        <Link to="/" style={{ float: `left`}}>
       Home
     </Link>
     {children}
         {/* <Link to="/">Home    </Link>  */}
-     <h3><ul>
-            <li><h3>City Name: {data.openWeather.name}</h3></li>
-            <li><h3>City Coord lat: {data.openWeather.coord.lat}</h3></li>
-            <li><h3>City Coord lon: {data.openWeather.coord.lon}</h3></li>
-     </ul></h3> 
+        <h2>City Name: {data.openWeather.name}</h2>
+        <h2>Wind Speed: {data.openWeather.wind.speed} mph</h2>
+        <h2>Temperature: {data.openWeather.main.temp} F</h2>
+        <h2>Real Feel: {data.openWeather.main.feels_like} F</h2>
+        <h2>High: {data.openWeather.main.temp_max} F</h2>
+        <h2>Low: {data.openWeather.main.temp_min} F</h2>
+        
 	
   </div>
     )}
